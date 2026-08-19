@@ -233,9 +233,24 @@ def get_latest_financial_data():
     """
     conn = sqlite3.connect("db/nifty100.db")
 
-    # Get latest financial ratios data
+    # Get all companies first
+    companies_query = "SELECT id as company_id, company_name FROM companies"
+    companies_df = pd.read_sql(companies_query, conn)
+
+    # Get latest financial ratios data for each company (left join to keep all companies)
     ratios_query = """
-    SELECT fr.*
+    SELECT fr.company_id, fr.year,
+           fr.net_profit_margin_pct, fr.operating_profit_margin_pct,
+           fr.return_on_equity_pct, fr.debt_to_equity, fr.interest_coverage,
+           fr.asset_turnover, fr.free_cash_flow_cr, fr.capex_cr,
+           fr.earnings_per_share, fr.book_value_per_share,
+           fr.dividend_payout_ratio_pct, fr.total_debt_cr,
+           fr.cash_from_operations_cr, fr.return_on_capital_employed_pct,
+           fr.return_on_assets_pct, fr.net_debt_cr, fr.capex_intensity_pct,
+           fr.fcf_conversion_pct, fr.revenue_cagr_5yr, fr.revenue_cagr_5yr_flag,
+           fr.pat_cagr_5yr, fr.pat_cagr_5yr_flag, fr.eps_cagr_5yr,
+           fr.eps_cagr_5yr_flag, fr.composite_quality_score,
+           fr.capital_allocation_pattern
     FROM financial_ratios fr
     INNER JOIN (
         SELECT company_id, MAX(year) as max_year
@@ -250,15 +265,11 @@ def get_latest_financial_data():
     sectors_query = "SELECT company_id, broad_sector FROM sectors"
     sectors_df = pd.read_sql(sectors_query, conn)
 
-    # Get company names
-    companies_query = "SELECT id as company_id, company_name FROM companies"
-    companies_df = pd.read_sql(companies_query, conn)
-
     conn.close()
 
-    # Merge all data
-    df = ratios_df.merge(sectors_df, on="company_id", how="left")
-    df = df.merge(companies_df, on="company_id", how="left")
+    # Merge all data: start with companies, left join ratios and sectors
+    df = companies_df.merge(ratios_df, on="company_id", how="left")
+    df = df.merge(sectors_df, on="company_id", how="left")
 
     return df
 
