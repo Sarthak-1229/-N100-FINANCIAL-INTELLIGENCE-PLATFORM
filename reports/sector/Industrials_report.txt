@@ -1,0 +1,30 @@
+SECTOR REPORT: Industrials
+Generated: 2026-08-19 16:00:11
+==================================================
+
+SECTOR MEDIAN KPIS (Latest Year: 2024-09)
+------------------------------
+Roe: 17.70
+De: 0.02
+Npm: 12.22
+Fcf: 1168.00
+Revenue Cagr 5Yr: 11.19
+
+CAPITAL ALLOCATION DISTRIBUTION
+------------------------------
+Reinvestor: 1 companies (10.0%)
+
+COMPANY LIST (10 companies)
+------------------------------
+ABB - Abbott India Ltd
+ADANIENT - Adani Enterprises Ltd
+ADANIPORTS - Adani Ports & Special Economic Zone Ltd
+
+BEL - Bharat Electronics Ltd
+BHEL - Bharat Heavy Electricals Limited
+
+GRASIM - Grasim Industries Ltd
+HAL - Hindustan Aeronautics Ltd
+HAVELLS - Havells India Ltd
+LT - Larsen & Toubro Ltd
+SIEMENS - Siemens Ltd

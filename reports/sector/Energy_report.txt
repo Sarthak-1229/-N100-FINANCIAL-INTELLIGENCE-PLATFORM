@@ -1,0 +1,30 @@
+SECTOR REPORT: Energy
+Generated: 2026-08-19 16:00:11
+==================================================
+
+SECTOR MEDIAN KPIS (Latest Year: 2024-09)
+------------------------------
+
+CAPITAL ALLOCATION DISTRIBUTION
+------------------------------
+
+COMPANY LIST (14 companies)
+------------------------------
+ADANIENSOL - Adani Energy Solutions Ltd
+ADANIGREEN - Adani Green Energy Ltd
+ADANIPOWER - Adani Power Ltd
+ATGL - Adani Total Gas Ltd
+BPCL - Bharat Petroleum Corporation Ltd
+GAIL - GAIL (India) Ltd
+IOC - Indian Oil Corporation
+
+JSWENERGY - JSW Energy Ltd
+NHPC - NHPC Ltd
+
+NTPC - NTPC Ltd
+ONGC - Oil & Natural Gas Corpn Ltd
+POWERGRID - Power Grid Corporation of India Ltd
+RELIANCE - Reliance Industries Ltd
+
+TATAPOWER - Tata Power Company Ltd
+

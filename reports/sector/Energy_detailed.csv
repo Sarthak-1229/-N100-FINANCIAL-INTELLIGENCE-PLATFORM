@@ -1,0 +1,19 @@
+company_id,company_name,broad_sector,pattern_label
+ADANIENSOL,Adani Energy Solutions Ltd,Energy,
+ADANIGREEN,Adani Green Energy Ltd,Energy,
+ADANIPOWER,Adani Power Ltd,Energy,
+ATGL,Adani Total Gas Ltd,Energy,
+BPCL,Bharat Petroleum Corporation Ltd,Energy,
+GAIL,GAIL (India) Ltd,Energy,
+IOC,"Indian Oil Corporation
+",Energy,
+JSWENERGY,JSW Energy Ltd,Energy,
+NHPC,"NHPC Ltd
+",Energy,
+NTPC,NTPC Ltd,Energy,
+ONGC,Oil & Natural Gas Corpn Ltd,Energy,
+POWERGRID,Power Grid Corporation of India Ltd,Energy,
+RELIANCE,"Reliance Industries Ltd
+",Energy,
+TATAPOWER,"Tata Power Company Ltd
+",Energy,

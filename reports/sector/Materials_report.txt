@@ -1,0 +1,23 @@
+SECTOR REPORT: Materials
+Generated: 2026-08-19 16:00:11
+==================================================
+
+SECTOR MEDIAN KPIS (Latest Year: 2024-09)
+------------------------------
+
+CAPITAL ALLOCATION DISTRIBUTION
+------------------------------
+
+COMPANY LIST (9 companies)
+------------------------------
+AMBUJACEM - Ambuja Cements Ltd
+ASIANPAINT - Asian Paints
+Indian Multi-National Paint and Coating Manufacturing Company
+COALINDIA - Coal India Ltd
+HINDALCO - Hindalco Industries Ltd
+JINDALSTEL - Jindal Steel & Power Ltd
+JSWSTEEL - JSW Steel Ltd
+PIDILITIND - Pidilite Industries Ltd
+SHREECEM - Shree Cement Ltd
+TATASTEEL - Tata Steel Ltd
+

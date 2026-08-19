@@ -33,11 +33,18 @@ def parse_analysis_text(text):
     if pd.isna(text) or not isinstance(text, str):
         return None, None
 
-    match = PATTERN.search(text.strip())
+    text = text.strip()
+    # Debug: print the text being parsed
+    # print(f"Parsing text: '{text}'")
+    match = PATTERN.search(text)
     if match:
         period = int(match.group(1))
         value = float(match.group(2))
+        # Debug: print the parsed values
+        # print(f"  -> period={period}, value={value}")
         return period, value
+    # Debug: if no match, print that
+    # print(f"  -> No match")
     return None, None
 
 def load_analysis_data():
@@ -45,11 +52,11 @@ def load_analysis_data():
     Load analysis.xlsx and parse the text fields.
     Returns DataFrame with parsed data.
     """
-    # Load the analysis file
-    df = pd.read_excel('data/raw/analysis.xlsx')
+    # Load the analysis file without header to see raw structure
+    df = pd.read_excel('data/raw/analysis.xlsx', header=None)
 
     # The actual data starts from row 2 (0-indexed) where row 1 has column names
-    # Skip the header rows and company name column
+    # Column 0 is row number, column 1 is company_id, columns 2-5 are the metrics
     data_rows = df.iloc[2:].copy()
 
     # Set proper column names from row 1
@@ -58,9 +65,8 @@ def load_analysis_data():
     # Reset index
     data_rows = data_rows.reset_index(drop=True)
 
-    # The first column should be the company ID
-    if 'id' in data_rows.columns:
-        data_rows = data_rows.rename(columns={'id': 'company_id'})
+    # The company_id column is already correctly named from the header
+    # No need to rename 'id' to 'company_id' since the header already has 'company_id'
 
     return data_rows
 

@@ -1,0 +1,37 @@
+SECTOR REPORT: Financials
+Generated: 2026-08-19 16:00:11
+==================================================
+
+SECTOR MEDIAN KPIS (Latest Year: 2024-09)
+------------------------------
+
+CAPITAL ALLOCATION DISTRIBUTION
+------------------------------
+
+COMPANY LIST (23 companies)
+------------------------------
+AXISBANK - Axis Bank Ltd
+BAJAJFINSV - Bajaj Finserv Ltd
+BAJAJHLDNG - Bajaj Holdings & Investment Ltd
+BAJFINANCE - Bajaj Finance Ltd
+BANKBARODA - Bank of Baroda
+CANBK - Canara Bank
+CHOLAFIN - Cholamandalam Investment & Finance Company Ltd
+HDFCBANK - HDFC Bank Ltd
+HDFCLIFE - HDFC Life Insurance Company Ltd
+ICICIBANK - ICICI Bank Ltd
+ICICIGI - ICICI Lombard General Insurance Company Ltd
+ICICIPRULI - ICICI Prudential Life Insurance Company Ltd
+INDUSINDBK - IndusInd Bank Ltd
+IRFC - Indian Railway Finance Corporation Ltd
+JIOFIN - Jio Financial Services Ltd
+KOTAKBANK - Kotak Mahindra Bank Ltd
+
+LICI - Life Insurance Corporation of India
+PFC - Power Finance Corporation Ltd
+PNB - Punjab National Bank
+RECLTD - REC Ltd
+SBILIFE - SBI Life Insurance Company Ltd
+SBIN - State Bank of India
+SHRIRAMFIN - Shriram Finance Ltd
+
