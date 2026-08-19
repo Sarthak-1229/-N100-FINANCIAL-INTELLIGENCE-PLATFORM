@@ -1,6 +1,6 @@
 """
 src/analytics/correlation_heatmap.py
-Generate correlation matrix heatmap: Pearson correlation of 10 KPIs across all 92 companies for latest year — save as reports/correlation_heatmap.png using seaborn heatmap with annotation
+Generate correlation matrix heatmap: Pearson correlation of 10 KPIs across all 92 companies for latest year — save as reports/correlation_heatmap.png using matplotlib heatmap with annotation
 """
 
 import pandas as pd
@@ -8,7 +8,6 @@ import numpy as np
 import sqlite3
 import os
 import matplotlib.pyplot as plt
-import seaborn as sns
 
 # Ensure output directories exist
 os.makedirs("reports", exist_ok=True)
@@ -68,7 +67,7 @@ def impute_missing_with_median(df):
 def generate_correlation_heatmap(df):
     """
     Generate correlation matrix heatmap: Pearson correlation of 10 KPIs
-    Save as reports/correlation_heatmap.png using seaborn heatmap with annotation
+    Save as reports/correlation_heatmap.png using matplotlib heatmap with annotation
     """
     # Select only the KPI columns for correlation
     kpi_cols = ['return_on_equity_pct', 'debt_to_equity', 'revenue_cagr_5yr',
@@ -79,24 +78,42 @@ def generate_correlation_heatmap(df):
     # Calculate correlation matrix
     corr_matrix = df[kpi_cols].corr(method='pearson')
 
-    # Create heatmap
-    plt.figure(figsize=(12, 10))
-    mask = np.triu(np.ones_like(corr_matrix, dtype=bool))  # Mask upper triangle
+    # Create heatmap using matplotlib
+    fig, ax = plt.subplots(figsize=(12, 10))
 
-    sns.heatmap(corr_matrix,
-                mask=mask,
-                annot=True,
-                fmt='.2f',
-                cmap='RdBu_r',
-                center=0,
-                square=True,
-                linewidths=0.5,
-                cbar_kws={"shrink": .8},
-                xticklabels=kpi_cols,
-                yticklabels=kpi_cols)
+    # We'll show the lower triangle (including diagonal) for clarity, but you can show full matrix
+    # Create a mask for the upper triangle
+    mask = np.triu(np.ones_like(corr_matrix, dtype=bool), k=1)  # Mask upper triangle without diagonal
 
-    plt.title('Pearson Correlation Matrix of 10 Key KPIs\n(Latest Year Data)',
-              fontsize=16, fontweight='bold', pad=20)
+    # Apply mask: set upper triangle to NaN for visualization (we'll still plot the lower triangle)
+    corr_matrix_masked = corr_matrix.copy()
+    corr_matrix_masked.where(~mask, inplace=True)  # Keep lower triangle and diagonal, set upper to NaN
+
+    # Plot the heatmap
+    im = ax.imshow(corr_matrix_masked, cmap='RdBu_r', vmin=-1, vmax=1, aspect='auto')
+
+    # Set ticks
+    ax.set_xticks(np.arange(len(kpi_cols)))
+    ax.set_yticks(np.arange(len(kpi_cols)))
+    ax.set_xticklabels(kpi_cols, rotation=45, ha="right")
+    ax.set_yticklabels(kpi_cols)
+
+    # Loop over data dimensions and create text annotations.
+    for i in range(len(kpi_cols)):
+        for j in range(len(kpi_cols)):
+            # Only annotate if not masked (i.e., lower triangle and diagonal)
+            if not mask[i, j]:
+                text = ax.text(j, i, f"{corr_matrix.iloc[i, j]:.2f}",
+                               ha="center", va="center", color="black")
+
+    # Add colorbar
+    cbar = ax.figure.colorbar(im, ax=ax)
+    cbar.ax.set_ylabel("Correlation Coefficient", rotation=-90, va="bottom")
+
+    # Set title
+    ax.set_title('Pearson Correlation Matrix of 10 Key KPIs\n(Latest Year Data)',
+                 fontsize=16, fontweight='bold', pad=20)
+
     plt.tight_layout()
 
     # Save plot

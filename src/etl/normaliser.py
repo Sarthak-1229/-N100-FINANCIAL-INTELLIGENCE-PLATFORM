@@ -23,8 +23,17 @@ _MONTH_YEAR_RE = re.compile(
     r"^([A-Za-z]{3})[\s\-](\d{2,4})", re.IGNORECASE
 )
 
+# Matches "2024-03", "24-03", "2023-12", "23-12" etc. (year-month format)
+# group(1) = year (2 or 4 digits), group(2) = month (1 or 2 digits)
+# Allows optional trailing whitespace and text (junk ignored)
+_ISO_YEAR_MONTH_RE = re.compile(r"^(\d{2,4})-(\d{1,2})")
+
 # Matches a bare year like "2013" or "2024.5" (fractional part ignored)
 _BARE_YEAR_RE = re.compile(r"^(\d{4})(\.\d+)?$")
+
+# Matches "2024-mar", "24-mar", etc. (year-month with month letters)
+# group(1) = year (2 or 4 digits), group(2) = 3-letter month
+_YEAR_MONTH_RE = re.compile(r"^(\d{2,4})[\s\-]([A-Za-z]{3})", re.IGNORECASE)
 
 # Values that are explicitly not a fiscal year-end and must be rejected
 _UNPARSEABLE = {"TTM", "N/A", "NA", "", "NAN"}
@@ -57,6 +66,34 @@ def normalize_year(raw, assume_default_month: bool = True):
     if text.upper() in _UNPARSEABLE:
         return None
 
+    # First, try to match ISO format: YYYY-MM or YY-MM etc. (with optional trailing junk)
+    m = _ISO_YEAR_MONTH_RE.match(text)
+    if m:
+        year_digits = m.group(1)
+        month_digits = m.group(2)
+        year = _expand_two_digit_year(year_digits)
+        if year is None:
+            return None
+        month = int(month_digits)
+        if not (1 <= month <= 12):
+            return None
+        # Zero-pad month to 2 digits
+        return f"{year}-{month:02d}"
+
+    # Second, try to match year-month with month letters (e.g., "2024-mar") with optional trailing junk
+    m = _YEAR_MONTH_RE.match(text)
+    if m:
+        year_digits = m.group(1)
+        month_abbr = m.group(2).upper()
+        if month_abbr not in _MONTHS:
+            return None
+        year = _expand_two_digit_year(year_digits)
+        if year is None:
+            return None
+        month = _MONTHS[month_abbr]
+        return f"{year}-{month}"
+
+    # Third, try to match month-year format (e.g., "Mar 2024") with optional trailing junk
     m = _MONTH_YEAR_RE.match(text)
     if m:
         month_abbr = m.group(1).upper()
@@ -129,7 +166,9 @@ def normalize_numeric(raw):
         return None
     if isinstance(raw, (int, float)):
         import math
-        return None if isinstance(raw, float) and math.isnan(raw) else float(raw)
+        if math.isnan(raw) or math.isinf(raw):
+            return None
+        return float(raw)
     text = str(raw).strip()
     if text.upper() in {"", "NA", "N/A", "-", "NAN"}:
         return None
@@ -149,7 +188,13 @@ def parse_analysis_metric(raw):
         return None, None
     text = str(raw)
     period_match = re.search(r"(\d+)\s*Years?", text, re.IGNORECASE)
-    value_match = re.search(r"(-?\d+(?:\.\d+)?)\s*%", text)
+    if period_match:
+        # Start looking for the value after the period match
+        start_pos = period_match.end()
+        value_match = re.search(r"(-?\d+(?:\.\d+)?)\s*%?", text[start_pos:])
+    else:
+        period_match = None
+        value_match = None
     period = int(period_match.group(1)) if period_match else None
     value = float(value_match.group(1)) if value_match else None
     return period, value

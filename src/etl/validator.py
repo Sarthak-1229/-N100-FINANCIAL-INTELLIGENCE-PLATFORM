@@ -143,3 +143,20 @@ def check_bs_strict_balance(total_assets, total_liabilities) -> bool:
 # ── DQ-16 : coverage check (>= 5 years of history per company) ─────
 def check_coverage(years_present: int, minimum=5) -> bool:
     return years_present >= minimum
+
+
+# Aliases for test compatibility (tests/dq/test_rules.py expects validate_* functions)
+validate_company_pk = check_company_pk_uniqueness
+validate_annual_pk = find_duplicate_period_keys
+validate_fk_integrity = find_orphan_fk
+validate_bs_balance = check_bs_balance
+validate_opm_cross_check = check_opm_crosscheck
+validate_positive_sales = check_positive_sales
+validate_year_format = check_year_format
+validate_ticker_format = check_ticker_format
+validate_net_cash = check_net_cash
+validate_fixed_assets = coerce_nonneg_fixed_assets
+validate_tax_rate = check_tax_rate_range
+validate_dividend_payout = check_dividend_payout
+validate_eps_sign = check_eps_sign
+validate_coverage = check_coverage
