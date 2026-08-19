@@ -1,0 +1,276 @@
+company_id,year,formula,reason
+ABB,2012-12,ICR,interest = 0 (Debt Free)
+ABB,2014-03,ICR,interest = 0 (Debt Free)
+ABB,2015-03,ICR,interest = 0 (Debt Free)
+ADANIENSOL,2014-03,NPM,sales is None or <= 0: 0.0
+ADANIENSOL,2014-03,OPM,operating_profit or sales is None/<=0: sales=0.0
+ADANIENSOL,2014-03,ROA,total_assets <= 0 or None
+ADANIENSOL,2014-03,ICR,interest = 0 (Debt Free)
+ADANIENSOL,2014-03,AT,total_assets <= 0 or None
+ADANIENSOL,2024-03,OPM,mismatch > 1%: computed=34.39, source=30.0
+AXISBANK,2013-03,OPM,mismatch > 1%: computed=30.58, source=1353.0
+AXISBANK,2014-03,OPM,mismatch > 1%: computed=31.47, source=2307.0
+AXISBANK,2015-03,OPM,mismatch > 1%: computed=31.36, source=3097.0
+AXISBANK,2016-03,OPM,mismatch > 1%: computed=32.61, source=3466.0
+AXISBANK,2017-03,OPM,mismatch > 1%: computed=53.45, source=-5715.0
+AXISBANK,2018-03,OPM,mismatch > 1%: computed=63.12, source=-10277.0
+AXISBANK,2019-03,OPM,mismatch > 1%: computed=49.39, source=-5447.0
+AXISBANK,2020-03,OPM,mismatch > 1%: computed=55.98, source=-9859.0
+AXISBANK,2021-03,OPM,mismatch > 1%: computed=50.12, source=-2510.0
+AXISBANK,2022-03,OPM,mismatch > 1%: computed=44.47, source=3170.0
+AXISBANK,2023-03,OPM,mismatch > 1%: computed=34.16, source=13857.0
+AXISBANK,2024-03,OPM,mismatch > 1%: computed=34.69, source=11952.0
+BAJAJHLDNG,2013-03,ICR,interest = 0 (Debt Free)
+BAJAJHLDNG,2014-03,ICR,interest = 0 (Debt Free)
+BAJAJHLDNG,2015-03,ICR,interest = 0 (Debt Free)
+BAJAJHLDNG,2016-03,ICR,interest = 0 (Debt Free)
+BAJAJHLDNG,2017-03,ICR,interest = 0 (Debt Free)
+BAJAJHLDNG,2018-03,ICR,interest = 0 (Debt Free)
+BAJAJHLDNG,2019-03,ICR,interest = 0 (Debt Free)
+BAJFINANCE,2015-03,OPM,mismatch > 1%: computed=32.49, source=1367.0
+BAJFINANCE,2016-03,OPM,mismatch > 1%: computed=32.25, source=1986.0
+BAJFINANCE,2017-03,OPM,mismatch > 1%: computed=32.6, source=2867.0
+BAJFINANCE,2018-03,OPM,mismatch > 1%: computed=32.28, source=3935.0
+BAJFINANCE,2019-03,OPM,mismatch > 1%: computed=29.5, source=6310.0
+BAJFINANCE,2020-03,OPM,mismatch > 1%: computed=34.73, source=7608.0
+BAJFINANCE,2021-03,OPM,mismatch > 1%: computed=40.64, source=6314.0
+BAJFINANCE,2022-03,OPM,mismatch > 1%: computed=37.55, source=9906.0
+BAJFINANCE,2023-03,OPM,mismatch > 1%: computed=30.65, source=16018.0
+BAJFINANCE,2024-03,OPM,mismatch > 1%: computed=29.29, source=19987.0
+BANKBARODA,2013-03,OPM,mismatch > 1%: computed=30.05, source=1006.0
+BANKBARODA,2014-03,OPM,mismatch > 1%: computed=29.78, source=809.0
+BANKBARODA,2015-03,OPM,mismatch > 1%: computed=29.98, source=902.0
+BANKBARODA,2016-03,OPM,mismatch > 1%: computed=55.44, source=-11700.0
+BANKBARODA,2017-03,OPM,mismatch > 1%: computed=43.28, source=-4372.0
+BANKBARODA,2018-03,OPM,mismatch > 1%: computed=56.65, source=-9197.0
+BANKBARODA,2019-03,OPM,mismatch > 1%: computed=48.79, source=-5414.0
+BANKBARODA,2020-03,OPM,mismatch > 1%: computed=51.44, source=-11728.0
+BANKBARODA,2021-03,OPM,mismatch > 1%: computed=51.23, source=-6957.0
+BANKBARODA,2022-03,OPM,mismatch > 1%: computed=51.12, source=-2948.0
+BANKBARODA,2023-03,OPM,mismatch > 1%: computed=40.45, source=6329.0
+BANKBARODA,2024-03,OPM,mismatch > 1%: computed=37.49, source=4102.0
+BOSCHLTD,2013-12,ICR,interest = 0 (Debt Free)
+CANBK,2013-03,OPM,mismatch > 1%: computed=21.18, source=655.0
+CANBK,2014-03,OPM,mismatch > 1%: computed=24.35, source=-672.0
+CANBK,2015-03,OPM,mismatch > 1%: computed=23.51, source=-621.0
+CANBK,2016-03,OPM,mismatch > 1%: computed=40.38, source=-8008.0
+CANBK,2017-03,OPM,mismatch > 1%: computed=37.85, source=-5775.0
+CANBK,2018-03,OPM,mismatch > 1%: computed=61.87, source=-13350.0
+CANBK,2019-03,OPM,mismatch > 1%: computed=56.73, source=-11590.0
+CANBK,2020-03,OPM,mismatch > 1%: computed=53.88, source=-12867.0
+CANBK,2021-03,OPM,mismatch > 1%: computed=61.83, source=-18367.0
+CANBK,2022-03,OPM,mismatch > 1%: computed=58.39, source=-13657.0
+CANBK,2023-03,OPM,mismatch > 1%: computed=49.8, source=-9877.0
+CANBK,2024-03,OPM,mismatch > 1%: computed=41.75, source=-7745.0
+CHOLAFIN,2013-03,OPM,mismatch > 1%: computed=26.77, source=472.0
+CHOLAFIN,2014-03,OPM,mismatch > 1%: computed=28.42, source=578.0
+CHOLAFIN,2015-03,OPM,mismatch > 1%: computed=28.56, source=696.0
+CHOLAFIN,2015-03,ICR,interest = 0 (Debt Free)
+CHOLAFIN,2016-03,OPM,mismatch > 1%: computed=30.04, source=899.0
+CHOLAFIN,2017-03,OPM,mismatch > 1%: computed=28.16, source=1143.0
+CHOLAFIN,2018-03,OPM,mismatch > 1%: computed=26.1, source=1451.0
+CHOLAFIN,2018-03,ICR,interest = 0 (Debt Free)
+CHOLAFIN,2019-03,OPM,mismatch > 1%: computed=22.96, source=1888.0
+CHOLAFIN,2020-03,OPM,mismatch > 1%: computed=27.79, source=1699.0
+CHOLAFIN,2020-03,ICR,interest = 0 (Debt Free)
+CHOLAFIN,2021-03,OPM,mismatch > 1%: computed=30.4, source=2094.0
+CHOLAFIN,2022-03,OPM,mismatch > 1%: computed=28.83, source=2924.0
+CHOLAFIN,2023-03,OPM,mismatch > 1%: computed=28.1, source=3515.0
+CHOLAFIN,2024-03,OPM,mismatch > 1%: computed=28.1, source=4548.0
+CIPLA,2013-03,OPM,mismatch > 1%: computed=73.26, source=2214.0
+CIPLA,2014-03,OPM,mismatch > 1%: computed=78.9, source=2147.0
+CIPLA,2015-03,OPM,mismatch > 1%: computed=80.94, source=2163.0
+CIPLA,2016-03,OPM,mismatch > 1%: computed=82.02, source=2480.0
+CIPLA,2017-03,OPM,mismatch > 1%: computed=82.66, source=2496.0
+CIPLA,2018-03,OPM,mismatch > 1%: computed=81.35, source=2826.0
+CIPLA,2019-03,OPM,mismatch > 1%: computed=81.07, source=3097.0
+CIPLA,2020-03,OPM,mismatch > 1%: computed=81.29, source=3206.0
+CIPLA,2021-03,OPM,mismatch > 1%: computed=77.8, source=4252.0
+CIPLA,2022-03,OPM,mismatch > 1%: computed=79.08, source=4553.0
+CIPLA,2023-03,OPM,mismatch > 1%: computed=77.91, source=5027.0
+CIPLA,2024-03,OPM,mismatch > 1%: computed=75.59, source=6291.0
+COALINDIA,2013-03,OPM,mismatch > 1%: computed=73.52, source=18087.0
+COALINDIA,2014-03,OPM,mismatch > 1%: computed=74.84, source=17766.0
+COALINDIA,2015-03,OPM,mismatch > 1%: computed=76.6, source=17343.0
+COALINDIA,2016-03,OPM,mismatch > 1%: computed=75.96, source=18714.0
+COALINDIA,2017-03,OPM,mismatch > 1%: computed=84.07, source=12448.0
+COALINDIA,2018-03,OPM,mismatch > 1%: computed=89.1, source=9288.0
+COALINDIA,2019-03,OPM,mismatch > 1%: computed=74.89, source=25007.0
+COALINDIA,2020-03,OPM,mismatch > 1%: computed=77.54, source=21581.0
+COALINDIA,2021-03,OPM,mismatch > 1%: computed=79.31, source=18628.0
+COALINDIA,2022-03,OPM,mismatch > 1%: computed=77.47, source=24721.0
+COALINDIA,2023-03,OPM,mismatch > 1%: computed=68.01, source=44232.0
+COALINDIA,2024-03,OPM,mismatch > 1%: computed=66.29, source=47971.0
+HDFCBANK,2013-03,OPM,mismatch > 1%: computed=35.22, source=3534.0
+HDFCBANK,2014-03,OPM,mismatch > 1%: computed=31.74, source=5602.0
+HDFCBANK,2015-03,OPM,mismatch > 1%: computed=31.9, source=7214.0
+HDFCBANK,2016-03,OPM,mismatch > 1%: computed=31.75, source=9037.0
+HDFCBANK,2017-03,OPM,mismatch > 1%: computed=32.56, source=11374.0
+HDFCBANK,2018-03,OPM,mismatch > 1%: computed=34.63, source=13374.0
+HDFCBANK,2019-03,OPM,mismatch > 1%: computed=33.15, source=16592.0
+HDFCBANK,2020-03,OPM,mismatch > 1%: computed=37.2, source=14593.0
+HDFCBANK,2021-03,OPM,mismatch > 1%: computed=40.81, source=16848.0
+HDFCBANK,2022-03,OPM,mismatch > 1%: computed=41.61, source=20795.0
+HDFCBANK,2023-03,OPM,mismatch > 1%: computed=36.92, source=29932.0
+HDFCBANK,2024-03,OPM,mismatch > 1%: computed=61.41, source=-44685.0
+HDFCLIFE,2013-03,OPM,mismatch > 1%: computed=96.27, source=525.0
+HDFCLIFE,2014-03,OPM,mismatch > 1%: computed=96.48, source=605.0
+HDFCLIFE,2015-03,OPM,mismatch > 1%: computed=96.79, source=874.0
+HDFCLIFE,2016-03,OPM,mismatch > 1%: computed=94.74, source=953.0
+HDFCLIFE,2017-03,OPM,mismatch > 1%: computed=96.83, source=972.0
+HDFCLIFE,2018-03,OPM,mismatch > 1%: computed=96.67, source=1074.0
+HDFCLIFE,2019-03,OPM,mismatch > 1%: computed=96.87, source=1215.0
+HDFCLIFE,2020-03,OPM,mismatch > 1%: computed=96.12, source=1141.0
+HDFCLIFE,2021-03,OPM,mismatch > 1%: computed=98.27, source=1235.0
+HDFCLIFE,2022-03,OPM,mismatch > 1%: computed=98.84, source=778.0
+HDFCLIFE,2023-03,OPM,mismatch > 1%: computed=99.89, source=80.0
+HDFCLIFE,2024-03,OPM,mismatch > 1%: computed=99.48, source=531.0
+HEROMOTOCO,2014-03,OPM,mismatch > 1%: computed=85.94, source=3553.0
+HEROMOTOCO,2015-03,OPM,mismatch > 1%: computed=87.22, source=3520.0
+HEROMOTOCO,2016-03,OPM,mismatch > 1%: computed=84.45, source=4424.0
+HEROMOTOCO,2017-03,OPM,mismatch > 1%: computed=83.97, source=4585.0
+HEROMOTOCO,2018-03,OPM,mismatch > 1%: computed=83.57, source=5334.0
+HEROMOTOCO,2019-03,OPM,mismatch > 1%: computed=85.21, source=5025.0
+HEROMOTOCO,2020-03,OPM,mismatch > 1%: computed=86.09, source=4070.0
+HEROMOTOCO,2021-03,OPM,mismatch > 1%: computed=86.9, source=4058.0
+HEROMOTOCO,2022-03,OPM,mismatch > 1%: computed=88.98, source=3256.0
+HEROMOTOCO,2023-03,OPM,mismatch > 1%: computed=88.0, source=4099.0
+HEROMOTOCO,2024-03,OPM,mismatch > 1%: computed=86.15, source=5235.0
+HINDALCO,2013-03,OPM,mismatch > 1%: computed=90.4, source=7699.0
+HINDALCO,2014-03,OPM,mismatch > 1%: computed=90.85, source=8024.0
+HINDALCO,2015-03,OPM,mismatch > 1%: computed=91.52, source=8844.0
+HINDALCO,2016-03,OPM,mismatch > 1%: computed=92.12, source=7778.0
+HINDALCO,2017-03,OPM,mismatch > 1%: computed=87.71, source=12317.0
+HINDALCO,2018-03,OPM,mismatch > 1%: computed=88.11, source=13695.0
+HINDALCO,2019-03,OPM,mismatch > 1%: computed=88.12, source=15511.0
+HINDALCO,2020-03,OPM,mismatch > 1%: computed=87.89, source=14306.0
+HINDALCO,2021-03,OPM,mismatch > 1%: computed=86.7, source=17559.0
+HINDALCO,2022-03,OPM,mismatch > 1%: computed=85.47, source=28347.0
+HINDALCO,2023-03,OPM,mismatch > 1%: computed=89.85, source=22666.0
+HINDALCO,2024-03,OPM,mismatch > 1%: computed=88.95, source=23872.0
+HINDUNILVR,2013-03,OPM,mismatch > 1%: computed=84.37, source=4220.0
+HINDUNILVR,2014-03,OPM,mismatch > 1%: computed=83.72, source=4759.0
+HINDUNILVR,2015-03,OPM,mismatch > 1%: computed=83.07, source=5412.0
+HINDUNILVR,2016-03,OPM,mismatch > 1%: computed=81.64, source=5910.0
+HINDUNILVR,2017-03,OPM,mismatch > 1%: computed=80.92, source=6328.0
+HINDUNILVR,2018-03,OPM,mismatch > 1%: computed=78.9, source=7499.0
+HINDUNILVR,2019-03,OPM,mismatch > 1%: computed=77.41, source=8880.0
+HINDUNILVR,2020-03,OPM,mismatch > 1%: computed=75.21, source=9861.0
+HINDUNILVR,2021-03,OPM,mismatch > 1%: computed=75.28, source=11626.0
+HINDUNILVR,2022-03,OPM,mismatch > 1%: computed=75.49, source=12857.0
+HINDUNILVR,2023-03,OPM,mismatch > 1%: computed=76.65, source=14147.0
+HINDUNILVR,2024-03,OPM,mismatch > 1%: computed=76.32, source=14659.0
+ICICIBANK,2013-03,OPM,mismatch > 1%: computed=70.59, source=-15085.0
+ICICIBANK,2014-03,OPM,mismatch > 1%: computed=66.4, source=-13084.0
+ICICIBANK,2015-03,OPM,mismatch > 1%: computed=70.53, source=-16120.0
+ICICIBANK,2016-03,OPM,mismatch > 1%: computed=88.12, source=-26955.0
+ICICIBANK,2017-03,OPM,mismatch > 1%: computed=104.76, source=-37737.0
+ICICIBANK,2018-03,OPM,mismatch > 1%: computed=117.12, source=-44906.0
+ICICIBANK,2019-03,OPM,mismatch > 1%: computed=116.38, source=-50971.0
+ICICIBANK,2020-03,OPM,mismatch > 1%: computed=100.62, source=-45190.0
+ICICIBANK,2021-03,OPM,mismatch > 1%: computed=102.41, source=-44805.0
+ICICIBANK,2022-03,OPM,mismatch > 1%: computed=84.69, source=-26558.0
+ICICIBANK,2023-03,OPM,mismatch > 1%: computed=72.57, source=-17341.0
+ICICIBANK,2024-03,OPM,mismatch > 1%: computed=62.41, source=-14152.0
+ICICIGI,2013-03,OPM,mismatch > 1%: computed=104.46, source=-178.0
+ICICIGI,2014-03,OPM,mismatch > 1%: computed=105.19, source=-225.0
+ICICIGI,2015-03,OPM,mismatch > 1%: computed=105.24, source=-221.0
+ICICIGI,2016-03,OPM,mismatch > 1%: computed=87.34, source=764.0
+ICICIGI,2016-03,ICR,interest = 0 (Debt Free)
+ICICIGI,2017-03,OPM,mismatch > 1%: computed=87.78, source=919.0
+ICICIGI,2018-03,OPM,mismatch > 1%: computed=103.79, source=-262.0
+ICICIGI,2019-03,OPM,mismatch > 1%: computed=85.05, source=1669.0
+ICICIGI,2020-03,OPM,mismatch > 1%: computed=84.61, source=1772.0
+ICICIGI,2021-03,OPM,mismatch > 1%: computed=82.97, source=2072.0
+ICICIGI,2022-03,OPM,mismatch > 1%: computed=93.66, source=1016.0
+ICICIGI,2023-03,OPM,mismatch > 1%: computed=92.93, source=1264.0
+ICICIGI,2024-03,OPM,mismatch > 1%: computed=87.42, source=2577.0
+ICICIPRULI,2013-03,OPM,mismatch > 1%: computed=96.28, source=745.0
+ICICIPRULI,2014-03,OPM,mismatch > 1%: computed=93.13, source=1504.0
+ICICIPRULI,2015-03,OPM,mismatch > 1%: computed=95.2, source=1655.0
+ICICIPRULI,2016-03,OPM,mismatch > 1%: computed=91.17, source=1842.0
+ICICIPRULI,2016-03,ICR,interest = 0 (Debt Free)
+ICICIPRULI,2017-03,OPM,mismatch > 1%: computed=95.22, source=1806.0
+ICICIPRULI,2018-03,OPM,mismatch > 1%: computed=95.44, source=1771.0
+ICICIPRULI,2019-03,OPM,mismatch > 1%: computed=98.7, source=541.0
+ICICIPRULI,2020-03,OPM,mismatch > 1%: computed=101.52, source=-319.0
+ICICIPRULI,2021-03,OPM,mismatch > 1%: computed=100.47, source=-390.0
+ICICIPRULI,2022-03,OPM,mismatch > 1%: computed=103.4, source=-2163.0
+ICICIPRULI,2023-03,OPM,mismatch > 1%: computed=103.48, source=-1757.0
+ICICIPRULI,2024-03,OPM,mismatch > 1%: computed=102.03, source=-1829.0
+INDIGO,2013-03,OPM,mismatch > 1%: computed=90.71, source=855.0
+INDIGO,2014-03,OPM,mismatch > 1%: computed=96.11, source=433.0
+INDIGO,2015-03,OPM,mismatch > 1%: computed=86.33, source=1904.0
+INDIGO,2016-03,OPM,mismatch > 1%: computed=80.4, source=3164.0
+INDIGO,2017-03,OPM,mismatch > 1%: computed=88.06, source=2219.0
+INDIGO,2018-03,OPM,mismatch > 1%: computed=86.84, source=3030.0
+INDIGO,2019-03,OPM,mismatch > 1%: computed=100.53, source=-151.0
+INDIGO,2020-03,OPM,mismatch > 1%: computed=88.62, source=4069.0
+INDIGO,2021-03,OPM,mismatch > 1%: computed=99.98, source=2.0
+INDIGO,2022-03,OPM,mismatch > 1%: computed=97.85, source=558.0
+INDIGO,2023-03,OPM,mismatch > 1%: computed=88.02, source=6521.0
+INDIGO,2024-03,OPM,mismatch > 1%: computed=76.3, source=16331.0
+INDUSINDBK,2013-03,OPM,mismatch > 1%: computed=27.88, source=286.0
+INDUSINDBK,2014-03,OPM,mismatch > 1%: computed=30.95, source=335.0
+INDUSINDBK,2015-03,OPM,mismatch > 1%: computed=32.33, source=288.0
+INDUSINDBK,2016-03,OPM,mismatch > 1%: computed=35.28, source=329.0
+INDUSINDBK,2017-03,OPM,mismatch > 1%: computed=39.46, source=379.0
+INDUSINDBK,2018-03,OPM,mismatch > 1%: computed=37.93, source=942.0
+INDUSINDBK,2019-03,OPM,mismatch > 1%: computed=41.7, source=-437.0
+INDUSINDBK,2020-03,OPM,mismatch > 1%: computed=43.81, source=-553.0
+INDUSINDBK,2021-03,OPM,mismatch > 1%: computed=55.16, source=-2469.0
+INDUSINDBK,2022-03,OPM,mismatch > 1%: computed=51.39, source=-839.0
+INDUSINDBK,2023-03,OPM,mismatch > 1%: computed=42.69, source=2067.0
+INDUSINDBK,2024-03,OPM,mismatch > 1%: computed=38.55, source=2978.0
+INFY,2016-03,ICR,interest = 0 (Debt Free)
+INFY,2017-03,ICR,interest = 0 (Debt Free)
+INFY,2018-03,ICR,interest = 0 (Debt Free)
+INFY,2019-03,ICR,interest = 0 (Debt Free)
+IRCTC,2015-03,ICR,interest = 0 (Debt Free)
+IRCTC,2016-03,ICR,interest = 0 (Debt Free)
+JIOFIN,2023-03,OPM,mismatch > 1%: computed=86.67, source=88.0
+JIOFIN,2023-03,ICR,interest = 0 (Debt Free)
+KOTAKBANK,2013-03,OPM,mismatch > 1%: computed=60.92, source=-1789.0
+KOTAKBANK,2014-03,OPM,mismatch > 1%: computed=58.84, source=-1379.0
+KOTAKBANK,2015-03,OPM,mismatch > 1%: computed=72.96, source=-3366.0
+KOTAKBANK,2016-03,OPM,mismatch > 1%: computed=56.57, source=-2263.0
+KOTAKBANK,2017-03,OPM,mismatch > 1%: computed=66.44, source=-3965.0
+KOTAKBANK,2018-03,OPM,mismatch > 1%: computed=66.87, source=-4141.0
+KOTAKBANK,2019-03,OPM,mismatch > 1%: computed=66.23, source=-5114.0
+KOTAKBANK,2020-03,OPM,mismatch > 1%: computed=67.45, source=-5005.0
+KOTAKBANK,2021-03,OPM,mismatch > 1%: computed=90.83, source=-9958.0
+KOTAKBANK,2022-03,OPM,mismatch > 1%: computed=90.98, source=-8512.0
+KOTAKBANK,2023-03,OPM,mismatch > 1%: computed=79.44, source=-5746.0
+KOTAKBANK,2024-03,OPM,mismatch > 1%: computed=83.67, source=-13382.0
+LICI,2019-03,ICR,interest = 0 (Debt Free)
+LICI,2020-03,ICR,interest = 0 (Debt Free)
+LICI,2021-03,ICR,interest = 0 (Debt Free)
+LICI,2022-03,ICR,interest = 0 (Debt Free)
+PNB,2013-03,OPM,operating_profit or sales is None/<=0: sales=43071.0
+PNB,2013-03,ROCE,input is None
+PNB,2014-03,OPM,operating_profit or sales is None/<=0: sales=44958.0
+PNB,2014-03,ROCE,input is None
+PNB,2015-03,OPM,operating_profit or sales is None/<=0: sales=48710.0
+PNB,2015-03,ROCE,input is None
+PNB,2016-03,OPM,operating_profit or sales is None/<=0: sales=50804.0
+PNB,2016-03,ROCE,input is None
+PNB,2017-03,OPM,operating_profit or sales is None/<=0: sales=48058.0
+PNB,2017-03,ROCE,input is None
+PNB,2018-03,OPM,operating_profit or sales is None/<=0: sales=48725.0
+PNB,2018-03,ROCE,input is None
+PNB,2019-03,OPM,operating_profit or sales is None/<=0: sales=52147.0
+PNB,2019-03,ROCE,input is None
+PNB,2020-03,OPM,operating_profit or sales is None/<=0: sales=54918.0
+PNB,2020-03,ROCE,input is None
+PNB,2021-03,OPM,operating_profit or sales is None/<=0: sales=81935.0
+PNB,2021-03,ROCE,input is None
+PNB,2022-03,OPM,operating_profit or sales is None/<=0: sales=76242.0
+PNB,2022-03,ROCE,input is None
+PNB,2023-03,OPM,operating_profit or sales is None/<=0: sales=86845.0
+PNB,2023-03,ROCE,input is None
+PNB,2024-03,OPM,operating_profit or sales is None/<=0: sales=109065.0
+PNB,2024-03,ROCE,input is None
+SBILIFE,2020-03,ICR,interest = 0 (Debt Free)
+SBILIFE,2021-03,ICR,interest = 0 (Debt Free)
+SBILIFE,2022-03,ICR,interest = 0 (Debt Free)
+SUNPHARMA,2024-03,OPM,mismatch > 1%: computed=26.84, source=28.0
