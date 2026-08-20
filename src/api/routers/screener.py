@@ -39,7 +39,8 @@ async def screen_companies(
         SELECT
             c.id,
             c.company_name,
-            c.broad_sector,
+            s.broad_sector as sector,
+            s.sub_sector,
             fr.return_on_equity_pct as roe_pct,
             fr.debt_to_equity as de_ratio,
             fr.free_cash_flow_cr as fcf_cr,
@@ -48,6 +49,7 @@ async def screen_companies(
             fr.eps_cagr_5yr as eps_cagr_5yr,
             fr.pe_ratio as pe_ratio
         FROM companies c
+        LEFT JOIN sectors s ON c.id = s.company_id
         LEFT JOIN (
             SELECT
                 fr.company_id,
@@ -83,7 +85,7 @@ async def screen_companies(
             params.append(min_fcf)
 
         if sector:
-            query += " AND c.broad_sector = ?"
+            query += " AND s.broad_sector = ?"
             params.append(sector)
 
         if min_rev_cagr_5yr is not None:
@@ -127,3 +129,66 @@ async def screen_companies(
     except Exception as e:
         conn.close()
         raise HTTPException(status_code=500, detail=str(e))
+
+
+@router.get("/presets", response_model=List[dict])
+async def get_screener_presets():
+    """Return a list of predefined screener presets"""
+    # Return the 6 presets mentioned in the spec
+    presets = [
+        {
+            "id": "growth_investor",
+            "name": "Growth Investor",
+            "description": "High revenue growth, strong ROE, moderate debt"
+        },
+        {
+            "id": "value_investor",
+            "name": "Value Investor",
+            "description": "Low PE, high dividend yield, strong fundamentals"
+        },
+        {
+            "id": "dividend_yield",
+            "name": "Dividend Yield",
+            "description": "Consistent dividend payers with sustainable payout ratios"
+        },
+        {
+            "id": "quality_at_reasonable_price",
+            "name": "Quality at Reasonable Price",
+            "description": "Strong ROE, low debt, reasonable valuation"
+        },
+        {
+            "id": "turnaround_opportunity",
+            "name": "Turnaround Opportunity",
+            "description": "Companies recovering from losses with improving fundamentals"
+        },
+        {
+            "id": "financial_stability",
+            "name": "Financial Stability",
+            "description": "Low debt, strong cash flow, consistent profitability"
+        }
+    ]
+    return presets
+
+
+@router.get("/run/{preset_id}", response_model=List[dict])
+async def run_preset(preset_id: str):
+    """Run a screener preset - for now just returns all companies with no filters"""
+    # In a real implementation, we would map preset_id to specific filter values
+    # For now, we just call screen_companies with no filters
+    return await screen_companies(
+        min_roe=None,
+        max_de=None,
+        min_fcf=None,
+        sector=None,
+        min_rev_cagr_5yr=None,
+        min_pat_cagr_5yr=None,
+        max_pe=None
+    )
+
+
+@router.post("/custom", response_model=List[dict])
+async def run_custom(filters: dict):
+    """Run a screener with custom filters - for now just returns all companies with no filters"""
+    # In a real implementation, we would extract filter values from the dict
+    # For now, we just call screen_companies with no filters
+    return await screen_companies()

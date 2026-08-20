@@ -26,31 +26,33 @@ async def get_companies(
 ):
     """
     Get list of all companies with optional filtering
-    Returns: id, company_name, broad_sector, sub_sector, roe_pct, roce_pct
+    Returns: id, company_name, sector, sub_sector, roe_pct, roce_pct
     """
     conn = get_db_connection()
 
     # Base query with latest financial data - using precomputed values from companies table
+    # Join with sectors table to get broad_sector and sub_sector
     query = """
     SELECT
         c.id,
         c.company_name,
-        c.broad_sector,
-        c.sub_sector,
+        s.broad_sector as sector,
+        s.sub_sector,
         c.roe_percentage as roe_pct,
         c.roce_percentage as roce_pct
     FROM companies c
+    LEFT JOIN sectors s ON c.id = s.company_id
     WHERE 1=1
     """
 
     params = []
 
     if sector:
-        query += " AND c.broad_sector = ?"
+        query += " AND s.broad_sector = ?"
         params.append(sector)
 
     if market_cap_category:
-        query += " AND c.market_cap_category = ?"
+        query += " AND s.market_cap_category = ?"
         params.append(market_cap_category)
 
     if search:
@@ -87,9 +89,15 @@ async def get_company_profile(ticker: str):
     conn = get_db_connection()
 
     try:
-        # Get company basic info
+        # Get company basic info with sector info
         company_query = """
-        SELECT * FROM companies WHERE id = ?
+        SELECT
+            c.*,
+            s.broad_sector as sector,
+            s.sub_sector
+        FROM companies c
+        LEFT JOIN sectors s ON c.id = s.company_id
+        WHERE c.id = ?
         """
         company_df = pd.read_sql_query(company_query, conn, params=[ticker])
 
@@ -114,9 +122,6 @@ async def get_company_profile(ticker: str):
             for key, value in ratios_data.items():
                 if key not in ['id', 'company_id']:  # Don't overwrite company identifiers
                     company_data[key] = value
-
-        # Get sector info (already in company data from companies table)
-        # Add any additional sector data if needed
 
         conn.close()
 

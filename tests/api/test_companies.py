@@ -57,13 +57,13 @@ def test_company_financials():
     company_id = companies[0]["id"]
 
     # Test P&L
-    response = client.get(f"/api/v1/companies/{company_id}/profitandloss")
+    response = client.get(f"/api/v1/companies/{company_id}/pl")
     assert response.status_code == 200
     data = response.json()
     assert isinstance(data, list)
 
     # Test Balance Sheet
-    response = client.get(f"/api/v1/companies/{company_id}/balancesheet")
+    response = client.get(f"/api/v1/companies/{company_id}/bs")
     assert response.status_code == 200
     data = response.json()
     assert isinstance(data, list)
@@ -85,15 +85,18 @@ def test_company_ratios():
     response = client.get(f"/api/v1/companies/{company_id}/ratios")
     assert response.status_code == 200
     data = response.json()
-    assert isinstance(data, dict)
+    # The endpoint returns a list of ratios (one per year)
+    assert isinstance(data, list)
+    assert len(data) > 0
 
-    # Check for expected ratio fields
+    # Check for expected ratio fields in the first (most recent) entry
+    first = data[0]
     expected_ratios = [
         "net_profit_margin_pct", "operating_profit_margin_pct",
         "return_on_equity_pct", "debt_to_equity", "interest_coverage"
     ]
     for ratio in expected_ratios:
-        assert ratio in data
+        assert ratio in first
 
 
 def test_company_tearsheet():
